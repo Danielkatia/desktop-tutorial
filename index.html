@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dantech enterprise </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+   <div id="container">
+   	<div id="dot"></div>
+   	<div id="dot1"></div>
+   	<div id="screen">
+   		<div id="header">Online ChatBot</div>
+   		<div id="messageDisplaySection">
+   			<div class="chat botMessages"> Hello there,How can i help you?</div>
+
+   			<div id="messageContainer">
+   			<div class="chat userMessages">I need your help in troubleshooting the printer</div>
+         </div>
+            <div id="userInput">
+            	<input type="text" name="messages" id="messages" autocomplete="OFF" placeholder="type here" required>
+            	<input type="submit" name="send" value="send" id="send">
+            </div>
+   		
+    		</div>
+   	</div>
+   </div>
+
+   <script>
+   	$(document).ready(function(){
+   		$("#messages").on("keyup",function(){
+   			if($("#messages").val()){
+   				$("send").css("display","block");
+   			}else{
+   				$("#send").css("display","none");
+   			}
+   		});
+   	});
+
+   	
+   </script>
+</body>
+</html>
